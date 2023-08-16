@@ -1,0 +1,10 @@
+{
+  "blogPosts": {
+    "post1": {
+      "title": "Blog Post Title 1",
+      "image": "image1.jpg",
+      "description": "This is the content of the first blog post.",
+      "url" : "some post url"
+    }
+}
+}

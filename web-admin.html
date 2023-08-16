@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input[type="text"],
+form textarea {
+  width: 99%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+form button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  form input[type="text"],
+  form textarea,
+  form button[type="submit"] {
+    width: 100%;
+  }
+}
+
+</style>
+<body>
+  <h1>Add or Update Blog Post</h1>
+  <form id="adminForm">
+    <label for="postTitle">Post Title:</label>
+    <input type="text" id="postTitle" name="postTitle" required><br>
+
+    <label for="postImage">Post Image URL:</label>
+    <input type="text" id="postImage" name="postImage" required><br>
+
+    <label for="postDescription">Post Description:</label>
+    <textarea id="postDescription" name="postDescription" rows="4" required></textarea><br>
+
+    <label for="postUrl">Post URL:</label>
+    <input type="text" id="postUrl" name="postUrl" required><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="createpost.js"></script>
+</body>
+</html>
